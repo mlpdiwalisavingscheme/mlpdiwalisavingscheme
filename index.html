@@ -84,7 +84,19 @@
         }
 
         .container { max-width: 1050px; margin: 30px auto 50px auto; padding: 0 20px; }
-        .section { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); padding: 35px; border-radius: 16px; margin-bottom: 40px; border: 1px solid rgba(212, 175, 55, 0.2); border-top: 1px solid rgba(212, 175, 55, 0.4); box-shadow: 0 15px 35px rgba(0,0,0,0.5); scroll-margin-top: 70px; position: relative; }
+        
+        /* UPDATED: Unified Professional Golden Border for ALL sections */
+        .section { 
+            background: rgba(20, 5, 10, 0.6); 
+            backdrop-filter: blur(15px); 
+            padding: 35px; 
+            border-radius: 16px; 
+            margin-bottom: 40px; 
+            border: 1px solid #D4AF37; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px rgba(212, 175, 55, 0.05); 
+            scroll-margin-top: 70px; 
+            position: relative; 
+        }
         
         .section h2 { margin-top: 0; font-size: 2em; padding-bottom: 12px; border-bottom: 1px dashed rgba(212, 175, 55, 0.4); letter-spacing: 1.5px; }
         .section h2::before, .section h2::after { content: '✨ '; font-size: 0.8em; }
@@ -315,7 +327,7 @@
             </ul>
         </div>
 
-        <div id="join" class="section" style="text-align: center; border-top: 2px solid #D4AF37;">
+        <div id="join" class="section" style="text-align: center;">
             <h2 class="gold-text"><span class="en-text">Join the Scheme</span><span class="ta-text">திட்டத்தில் இணையுங்கள்</span></h2>
             <p class="en-text" style="margin-bottom: 20px;">Become a part of our successful journey and make this Diwali special. Fill the form below to enroll.</p>
             <p class="ta-text" style="margin-bottom: 20px;">எங்களின் வெற்றிகரமான பயணத்தில் இணைந்து இந்த தீபாவளியைச் சிறப்பாக்குங்கள். திட்டத்தில் சேர கீழே உள்ள படிவத்தை நிரப்பவும்.</p>
@@ -350,7 +362,7 @@
             </form>
         </div>
 
-        <div id="payment" class="section" style="text-align: center; border: 2px solid #D4AF37; background: rgba(212, 175, 55, 0.05); padding: 35px; border-radius: 16px;">
+        <div id="payment" class="section" style="text-align: center;">
             <h2 class="gold-text"><span class="en-text">Make Your Payment</span><span class="ta-text">பணம் செலுத்த</span></h2>
             <p class="en-text">Enter your name and pay your weekly scheme amount securely via UPI.</p>
             <p class="ta-text">உங்கள் பெயரைப் பதிவிட்டு, சந்தாத் தொகையைப் பாதுகாப்பாகச் செலுத்துங்கள்.</p>
@@ -364,7 +376,7 @@
             <p style="font-size: 0.95em; color: #dfdfdf; margin-top: 15px;"><span class="en-text">Note: Please send a screenshot on WhatsApp after payment.</span><span class="ta-text">குறிப்பு: பணம் செலுத்திய பின் வாட்ஸ்அப்பில் ஸ்க்ரீன்ஷாட் அனுப்பவும்.</span></p>
         </div>
 
-        <div id="history" class="section" style="text-align: center; border: 2px solid #D4AF37; background: rgba(212, 175, 55, 0.05); padding: 35px 20px; border-radius: 16px;">
+        <div id="history" class="section" style="text-align: center;">
             <h2 class="gold-text"><span class="en-text">Payment History</span><span class="ta-text">கட்டண வரலாறு</span></h2>
             <p class="en-text">Enter your registered 10-digit mobile number to view your 52-week passbook ledger.</p>
             <p class="ta-text">உங்கள் 52 வார பாஸ்புக் லெட்ஜரைப் பார்க்க உங்கள் 10 இலக்க மொபைல் எண்ணைப் பதிவிடவும்.</p>
@@ -396,8 +408,7 @@
             </div>
         </div>
 
-        <!-- NEW: APP DOWNLOAD SECTION -->
-        <div id="app" class="section" style="text-align: center; border: 2px solid #D4AF37; background: rgba(212, 175, 55, 0.05); padding: 35px; border-radius: 16px;">
+        <div id="app" class="section" style="text-align: center;">
             <h2 class="gold-text"><span class="en-text">Get Our Mobile App</span><span class="ta-text">எங்கள் மொபைல் ஆப்</span></h2>
             <p style="color: #dfdfdf; font-size: 1.1em; margin-bottom: 20px;">
                 <span class="en-text">Manage your Diwali Saving Scheme easily from your smartphone! <br><strong style="color: #25D366;">(For Android Users Only)</strong></span>
@@ -445,7 +456,7 @@
             <button onclick="closePasscodeModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 1.8em; color: #F3DA7A; cursor: pointer;">&times;</button>
             <h3 class="gold-text" style="margin-top: 0; font-size: 1.5em;"><span class="no-gradient">🔐</span> Admin Access</h3>
             <p style="color: #dfdfdf; font-size: 0.9em; margin-bottom: 15px;">Enter passcode to open dashboard</p>
-            <input type="password" id="adminPassInput" class="form-input" style="width: 100%; box-sizing: border-box; margin-bottom: 20px; letter-spacing: 5px; font-weight: bold; text-align: center; font-size: 1.2em;" placeholder="****">
+            <input type="password" id="adminPassInput" class="form-input" style="width: 100%; box-sizing: border-box; margin-bottom: 20px; letter-spacing: 5px; font-weight: bold; text-align: center; font-size: 1.2em;" placeholder="****" onkeydown="if(event.key === 'Enter') submitPasscode()">
             <button onclick="submitPasscode()" id="passSubmitBtn" class="submit-btn" style="width: 100%; padding: 12px; font-size: 1.1em; margin-top: 0;">Login</button>
             <p style="margin-top: 15px; margin-bottom: 0; font-size: 0.9em;">
                 <a href="#" onclick="openChangePasswordModal(); return false;" style="color: #F3DA7A; text-decoration: none; border-bottom: 1px dashed #F3DA7A;">Forgot Password?</a>
@@ -468,14 +479,14 @@
             <!-- Step 2: Verify OTP -->
             <div id="otpStep2" style="display: none;">
                 <p style="font-size: 0.9em; color: #25D366; margin-bottom: 15px;">OTP sent successfully! Please check your inbox/spam.</p>
-                <input type="text" id="otpInput" class="form-input" placeholder="Enter 6-digit OTP" style="width: 100%; box-sizing: border-box; margin-bottom: 15px; text-align: center; font-weight: bold; letter-spacing: 2px;" maxlength="6">
+                <input type="text" id="otpInput" class="form-input" placeholder="Enter 6-digit OTP" style="width: 100%; box-sizing: border-box; margin-bottom: 15px; text-align: center; font-weight: bold; letter-spacing: 2px;" maxlength="6" onkeydown="if(event.key === 'Enter') verifyOTP()">
                 <button id="verifyOtpBtn" onclick="verifyOTP()" class="submit-btn" style="padding: 10px 30px; font-size: 1em; width: 100%;">Verify OTP</button>
             </div>
 
             <!-- Step 3: New Password -->
             <div id="otpStep3" style="display: none;">
                 <p style="font-size: 0.9em; color: #F3DA7A; margin-bottom: 15px;">OTP Verified! Enter your new admin passcode.</p>
-                <input type="text" id="newPassInput" class="form-input" placeholder="New Passcode (e.g. 1011)" style="width: 100%; box-sizing: border-box; margin-bottom: 15px; text-align: center; font-weight: bold; letter-spacing: 2px;">
+                <input type="text" id="newPassInput" class="form-input" placeholder="New Passcode (e.g. 1011)" style="width: 100%; box-sizing: border-box; margin-bottom: 15px; text-align: center; font-weight: bold; letter-spacing: 2px;" onkeydown="if(event.key === 'Enter') saveNewPassword()">
                 <button id="savePassBtn" onclick="saveNewPassword()" class="submit-btn" style="padding: 10px 30px; font-size: 1em; width: 100%;">Save Password</button>
             </div>
 
