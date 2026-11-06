@@ -524,7 +524,7 @@
             if (nameInput === "") { alert(isTamil ? "பணம் செலுத்தும் முன் தயவுசெய்து உங்கள் பெயரைப் பதிவிடவும்!" : "Please enter your name before making the payment!"); document.getElementById('payerName').focus(); return; }
 
             const transactionNote = encodeURIComponent("MLP DIWALI SAVING SCHEME - " + nameInput);
-            const upiLink = `upi://pay?pa=mlpdiwalisavingscheme@ybl&pn=MLP%20Diwali%20Saving%20Scheme&cu=INR&tn=${transactionNote}`;
+            const upiLink = `upi://pay?pa=Mlpdiwalisavingscheme2015@axl&pn=MLP%20Diwali%20Saving%20Scheme&cu=INR&tn=${transactionNote}`;
 
             const qrContainer = document.getElementById("qrCodeContainer"); qrContainer.innerHTML = ""; 
             document.getElementById("qrNameEn").innerText = nameInput; document.getElementById("qrNameTa").innerText = nameInput;
