@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLP DIWALI SAVING SCHEME</title>
 
-    <!-- Google Search Console Verification Tag -->
     <meta name="google-site-verification" content="qCLrhT4LI41paSnyYVwRjbYmT9gT28sFffWuUVOyeaQ" />
-
-    <!-- Favicon & Browser Tab DP -->
     <link rel="icon" type="image/png" sizes="192x192" href="1000087690.png">
     <link rel="apple-touch-icon" href="1000087690.png">
 
-    <!-- WhatsApp & Social Media Preview DP Tags -->
     <meta property="og:title" content="MLP DIWALI SAVING SCHEME">
     <meta property="og:description" content="Official MLP Diwali Saving Scheme Management Since 2015">
     <meta property="og:image" content="1000087690.png">
     <meta property="og:type" content="website">
 
-    <!-- Google Search Logo Fix (Schema Markup) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -141,7 +136,7 @@
         .submit-btn { background: linear-gradient(45deg, #D4AF37, #C59828, #F3DA7A); color: #1a0209; padding: 14px 40px; font-size: 1.25em; border: none; border-radius: 50px; font-weight: 700; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; display: inline-block; margin-top: 12px; box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3); font-family: 'Outfit', sans-serif; }
         .submit-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 25px rgba(212, 175, 55, 0.5); }
 
-        #qrModal { display: none; margin-top: 20px; padding: 20px; background: rgba(255, 255, 255, 0.05); border: 2px solid #D4AF37; border-radius: 12px; max-width: 280px; margin-left: auto; margin-right: auto; text-align: center; }
+        #qrModal { display: none; margin-top: 20px; padding: 25px; background: rgba(0, 0, 0, 0.7); border: 1px solid #D4AF37; border-radius: 16px; max-width: 320px; margin-left: auto; margin-right: auto; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         #qrCodeContainer { background: #fff; padding: 12px; border-radius: 8px; display: inline-block; margin-top: 8px;}
         #qrCodeContainer img { margin: 0 auto; }
 
@@ -346,16 +341,48 @@
 
         <div id="payment" class="section" style="text-align: center;">
             <h2 class="gold-text"><span class="en-text">Make Your Payment</span><span class="ta-text">பணம் செலுத்த</span></h2>
-            <p class="en-text">Enter your name and pay your weekly scheme amount securely via UPI.</p>
+            <p class="en-text">Enter your name and pay your weekly scheme amount securely.</p>
             <p class="ta-text">உங்கள் பெயரைப் பதிவிட்டு, சந்தாத் தொகையைப் பாதுகாப்பாகச் செலுத்துங்கள்.</p>
             <div style="margin: 20px 0;"><input type="text" id="payerName" class="form-input" style="text-align: center; width: 80%; max-width: 330px; font-weight: bold; font-size: 1.1em;" placeholder="Your Name / உங்கள் பெயர்..." required></div>
             <div style="margin-bottom: 10px;"><a href="#" onclick="processPublicPayment(event)" class="submit-btn" style="box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);"><span class="en-text">Pay Now</span><span class="ta-text">இப்போதே செலுத்துங்கள்</span></a></div>
+            
+            <!-- SECURE PAYMENT MODAL (WITH COPY UPI ID) -->
             <div id="qrModal">
-                <p style="color: #F3DA7A; font-weight: bold; font-size: 1.05em; margin-bottom: 8px;"><span class="en-text">Scan to Pay: <br><span id="qrNameEn" style="color: #fff;"></span></span><span class="ta-text">ஸ்கேன் செய்து செலுத்தவும்: <br><span id="qrNameTa" style="color: #fff;"></span></span></p>
+                <p style="color: #F3DA7A; font-weight: bold; font-size: 1.1em; margin-bottom: 12px;">
+                    <span class="en-text">Secure Payment Options</span>
+                    <span class="ta-text">பாதுகாப்பான கட்டண முறைகள்</span>
+                </p>
+                <p style="font-size: 0.85em; color: #aaa; margin-bottom: 15px;">
+                    <span id="qrNameEn" class="en-text" style="color: #fff; font-weight: bold;"></span>
+                    <span id="qrNameTa" class="ta-text" style="color: #fff; font-weight: bold;"></span>
+                </p>
+
+                <!-- OPTION 1: COPY ID -->
+                <div style="background: rgba(0,0,0,0.6); padding: 15px; border-radius: 8px; border: 1px dashed #D4AF37; margin-bottom: 15px;">
+                    <p style="margin: 0 0 10px 0; font-size: 0.9em; color: #dfdfdf;">
+                        <span class="en-text">1. Copy Official UPI ID & Pay in GPay/PhonePe:</span>
+                        <span class="ta-text">1. இந்த UPI ID-யை காப்பி செய்து PhonePe/GPay-ல் கட்டவும்:</span>
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; justify-content: center; align-items: center;">
+                        <span style="color: #fff; font-weight: bold; font-size: 1.1em; letter-spacing: 0.5px;">Mlpdiwalisavingscheme2015@ibl</span>
+                        <button id="copyUpiBtn" onclick="copyUpiID()" style="background: #D4AF37; color: #1a0209; border: none; padding: 8px 15px; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
+                            <span class="en-text">COPY UPI ID</span><span class="ta-text">காப்பி செய் (COPY)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- OPTION 2: QR CODE -->
+                <p style="margin: 10px 0; font-size: 0.9em; color: #dfdfdf;">
+                    <span class="en-text">2. OR Scan this QR Code:</span>
+                    <span class="ta-text">2. (அல்லது) இந்த QR கோடை ஸ்கேன் செய்யவும்:</span>
+                </p>
                 <div id="qrCodeContainer"></div>
-                <p style="color: #dfdfdf; font-size: 0.85em; margin-top: 12px;"><span class="en-text">If automatic redirect failed, scan with GPay/PhonePe.</span><span class="ta-text">பேமெண்ட் ஆப் திறக்கவில்லை எனில் GPay/PhonePe மூலம் ஸ்கேன் செய்யவும்.</span></p>
+                
+                <p style="font-size: 0.85em; color: #dfdfdf; margin-top: 20px;">
+                    <span class="en-text">Note: Please send a screenshot on WhatsApp after payment.</span>
+                    <span class="ta-text">குறிப்பு: பணம் செலுத்திய பின் வாட்ஸ்அப்பில் ஸ்க்ரீன்ஷாட் அனுப்பவும்.</span>
+                </p>
             </div>
-            <p style="font-size: 0.95em; color: #dfdfdf; margin-top: 15px;"><span class="en-text">Note: Please send a screenshot on WhatsApp after payment.</span><span class="ta-text">குறிப்பு: பணம் செலுத்திய பின் வாட்ஸ்அப்பில் ஸ்க்ரீன்ஷாட் அனுப்பவும்.</span></p>
         </div>
 
         <div id="history" class="section" style="text-align: center;">
@@ -518,7 +545,9 @@
             } catch(e) { return dStr; }
         }
 
-        // FIXED PAYMENT FUNCTION WITH MERCHANT PARAMS
+        // ==========================================
+        // SECURE PAYMENT FUNCTION (COPY UPI ID & QR)
+        // ==========================================
         function processPublicPayment(event) {
             if(event) event.preventDefault(); 
             const nameInput = document.getElementById('payerName').value.trim(); 
@@ -529,25 +558,44 @@
                 return; 
             }
 
+            const upiId = "Mlpdiwalisavingscheme2015@ibl";
             const transactionNote = encodeURIComponent("MLP DSS - " + nameInput);
-            const trId = "MLP" + Date.now();
-            
-            // FULLY FIXED UPI LINK: Includes correct UPI ID, Business Name, Transaction ID, and Merchant Params
-            const upiLink = `upi://pay?pa=Mlpdiwalisavingscheme2015@ibl&pn=MLP%20FARM&mc=5399&mode=02&purpose=00&tr=${trId}&cu=INR&tn=${transactionNote}`;
+            const upiLink = `upi://pay?pa=${upiId}&pn=MLP%20FARM&tn=${transactionNote}`;
 
             const qrContainer = document.getElementById("qrCodeContainer"); qrContainer.innerHTML = ""; 
             document.getElementById("qrNameEn").innerText = nameInput; document.getElementById("qrNameTa").innerText = nameInput;
 
             new QRCode(qrContainer, { text: upiLink, width: 180, height: 180, colorDark : "#000000", colorLight : "#ffffff", correctLevel : QRCode.CorrectLevel.H });
 
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-            if (isMobile) {
-                window.location.href = upiLink;
-                let qrTimeout = setTimeout(() => { if (document.visibilityState === 'visible') { document.getElementById("qrModal").style.display = "block"; } }, 2000);
-                document.addEventListener("visibilitychange", function handleVisibilityChange() { if (document.hidden) { clearTimeout(qrTimeout); document.removeEventListener("visibilitychange", handleVisibilityChange); } });
-            } else { document.getElementById("qrModal").style.display = "block"; }
+            // Show Secure Payment Modal instead of direct app link
+            document.getElementById("qrModal").style.display = "block"; 
         }
+
+        function copyUpiID() {
+            const upiId = "Mlpdiwalisavingscheme2015@ibl";
+            const isTamil = document.body.classList.contains('lang-ta-active');
+            
+            navigator.clipboard.writeText(upiId).then(() => {
+                const btn = document.getElementById('copyUpiBtn');
+                btn.innerHTML = isTamil ? '<span class="ta-text" style="display:block;">காப்பி செய்யப்பட்டது ✓</span>' : '<span class="en-text" style="display:block;">COPIED SUCCESSFULLY ✓</span>';
+                btn.style.background = "#25D366";
+                btn.style.color = "#fff";
+                
+                alert(isTamil ? "UPI ID காப்பி செய்யப்பட்டது! \nPhonePe அல்லது GPay-ல் Paste செய்து பணம் செலுத்தவும்." : "UPI ID Copied Successfully! \nOpen PhonePe/GPay and Paste it to Pay.");
+                
+                // Try to open UPI Apps directly after copying
+                window.location.href = "upi://pay";
+                
+                setTimeout(() => { 
+                    btn.innerHTML = isTamil ? '<span class="ta-text" style="display:block;">காப்பி செய் (COPY)</span>' : '<span class="en-text" style="display:block;">COPY UPI ID</span>';
+                    btn.style.background = "#D4AF37"; 
+                    btn.style.color = "#1a0209"; 
+                }, 4000);
+            }).catch(err => {
+                alert("Failed to copy. Please manually copy the UPI ID.");
+            });
+        }
+        
         document.getElementById('payerName').addEventListener('input', function() { document.getElementById("qrModal").style.display = "none"; });
 
         function checkHistory(event) {
