@@ -518,15 +518,22 @@
             } catch(e) { return dStr; }
         }
 
+        // FIXED PAYMENT FUNCTION WITH MERCHANT PARAMS
         function processPublicPayment(event) {
             if(event) event.preventDefault(); 
-            const nameInput = document.getElementById('payerName').value.trim(); const isTamil = document.body.classList.contains('lang-ta-active');
-            if (nameInput === "") { alert(isTamil ? "பணம் செலுத்தும் முன் தயவுசெய்து உங்கள் பெயரைப் பதிவிடவும்!" : "Please enter your name before making the payment!"); document.getElementById('payerName').focus(); return; }
+            const nameInput = document.getElementById('payerName').value.trim(); 
+            const isTamil = document.body.classList.contains('lang-ta-active');
+            if (nameInput === "") { 
+                alert(isTamil ? "பணம் செலுத்தும் முன் தயவுசெய்து உங்கள் பெயரைப் பதிவிடவும்!" : "Please enter your name before making the payment!"); 
+                document.getElementById('payerName').focus(); 
+                return; 
+            }
 
-            const transactionNote = encodeURIComponent("MLP DIWALI SAVING SCHEME - " + nameInput);
+            const transactionNote = encodeURIComponent("MLP DSS - " + nameInput);
+            const trId = "MLP" + Date.now();
             
-            // UPDATED UPI ID AND ADDED MERCHANT PARAMS FOR BUSINESS ACCOUNT
-            const upiLink = `upi://pay?pa=Mlpdiwalisavingscheme2015@ibl&pn=MLP%20FARM&mc=0000&mode=02&purpose=00&cu=INR&tn=${transactionNote}`;
+            // FULLY FIXED UPI LINK: Includes correct UPI ID, Business Name, Transaction ID, and Merchant Params
+            const upiLink = `upi://pay?pa=Mlpdiwalisavingscheme2015@ibl&pn=MLP%20FARM&mc=5399&mode=02&purpose=00&tr=${trId}&cu=INR&tn=${transactionNote}`;
 
             const qrContainer = document.getElementById("qrCodeContainer"); qrContainer.innerHTML = ""; 
             document.getElementById("qrNameEn").innerText = nameInput; document.getElementById("qrNameTa").innerText = nameInput;
