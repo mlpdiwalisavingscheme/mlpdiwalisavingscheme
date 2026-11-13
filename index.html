@@ -153,7 +153,7 @@
         .contact-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 15px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1em; transition: 0.3s; background: linear-gradient(45deg, #D4AF37, #C59828, #F3DA7A); color: #1a0209; box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3); font-family: 'Outfit', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
         .contact-btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
 
-        .contact-box { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3); font-size: 1.1em; margin: 0 auto 20px auto; max-width: 450px; word-wrap: break-word; overflow-wrap: break-word; }
+        .contact-box { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3); font-size: 1.1em; margin: 0 auto 20px auto; max-width: 450px; }
         .contact-box p { margin: 8px 0; }
         .contact-box span { color: #F3DA7A; font-weight: 600; letter-spacing: 1px;}
 
@@ -193,7 +193,7 @@
                 Our website is currently undergoing scheduled updates and maintenance. We will be back online shortly!<br><br>
                 <strong style="color: #F3DA7A;">~ MLP Management</strong>
             </p>
-            <p style="font-size: 0.85em; color: #888;">For urgent queries, contact: 6382838017</p>
+            <p style="font-size: 0.85em; color: #888;">For urgent queries, contact: 6382838017, 9965236069</p>
         </div>
     </div>
 
@@ -345,15 +345,15 @@
             <h2 class="gold-text"><span class="en-text">Make Your Payment</span><span class="ta-text">பணம் செலுத்த</span></h2>
             <p class="en-text" style="margin-bottom: 25px;">Copy the UPI ID below to pay your weekly scheme amount securely.</p>
             <p class="ta-text" style="margin-bottom: 25px;">கீழே உள்ள UPI ID-ஐ காப்பி செய்து, சந்தாத் தொகையைப் பாதுகாப்பாகச் செலுத்துங்கள்.</p>
-            
-            <!-- DIRECT UPI ID COPY BOX -->
+
+            <!-- DIRECT UPI ID COPY BOX (FIXED OVERFLOW) -->
             <div style="background: rgba(0,0,0,0.6); padding: 25px; border-radius: 16px; border: 2px dashed #D4AF37; margin: 0 auto 25px auto; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #aaa;">
                     <span class="en-text">Official Business UPI ID:</span>
                     <span class="ta-text">அதிகாரப்பூர்வ UPI ID:</span>
                 </p>
-                <span style="color: #fff; font-weight: bold; font-size: 1.25em; letter-spacing: 0.5px; display: block; margin-bottom: 20px;">Mlpdiwalisavingscheme2015@ibl</span>
-                
+                <span style="color: #fff; font-weight: bold; font-size: clamp(1.1em, 5vw, 1.25em); letter-spacing: 0.5px; display: block; margin-bottom: 20px; word-break: break-all; overflow-wrap: break-word;">Mlpdiwalisavingscheme2015@ibl</span>
+
                 <button id="mainCopyUpiBtn" onclick="copyMainUpiID()" class="submit-btn" style="width: 100%; margin: 0; padding: 12px 20px; font-size: 1.1em; display: flex; align-items: center; justify-content: center; gap: 8px;">
                     <span style="font-size: 1.2em;" class="no-gradient">📋</span>
                     <span class="en-text" style="text-shadow: none;">COPY UPI ID</span>
@@ -361,12 +361,12 @@
                 </button>
             </div>
 
-            <!-- PAYMENT STEPS -->
+            <!-- PAYMENT STEPS (ADDED NUMBER) -->
             <div style="text-align: left; background: rgba(20, 5, 10, 0.8); padding: 25px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.3); max-width: 550px; margin: 0 auto;">
                 <h3 class="gold-text" style="margin-top: 0; font-size: 1.3em; text-align: center; border-bottom: 1px dashed rgba(212, 175, 55, 0.3); padding-bottom: 12px; margin-bottom: 15px;">
                     <span class="en-text">How to Pay? (Steps)</span><span class="ta-text">பணம் செலுத்துவது எப்படி? (வழிமுறைகள்)</span>
                 </h3>
-                
+
                 <ol style="color: #dfdfdf; font-size: 1.05em; line-height: 1.8; padding-left: 20px; margin-bottom: 0;">
                     <span class="en-text">
                         <li>Click the <strong>COPY UPI ID</strong> button above.</li>
@@ -374,7 +374,7 @@
                         <li>Select <strong>"Pay to UPI ID"</strong> or "To Bank/UPI ID" and Paste our ID.</li>
                         <li>Enter your weekly payment amount.</li>
                         <li><strong style="color: #F3DA7A;">Must Do:</strong> Type your <strong>NAME</strong> in the "Add a Note" or "Remarks" section before paying.</li>
-                        <li>After successful payment, send a screenshot to our WhatsApp (<a href="https://wa.me/916382838017" style="color: #25D366; text-decoration: none; font-weight: bold;">6382838017</a>).</li>
+                        <li>After successful payment, send a screenshot to our WhatsApp (<a href="https://wa.me/916382838017" style="color: #25D366; text-decoration: none; font-weight: bold;">6382838017</a> / <a href="https://wa.me/919965236069" style="color: #25D366; text-decoration: none; font-weight: bold;">9965236069</a>).</li>
                     </span>
                     <span class="ta-text">
                         <li>மேலே உள்ள <strong>COPY UPI ID</strong> பட்டனை ஒருமுறை அழுத்தவும்.</li>
@@ -382,7 +382,7 @@
                         <li><strong>"Pay to UPI ID"</strong> அல்லது "To Bank/UPI ID" என்பதைத் தேர்வு செய்து, காப்பி செய்ததை Paste செய்யவும்.</li>
                         <li>உங்கள் சந்தாத் தொகையை (உதா: ₹100, ₹200) டைப் செய்யவும்.</li>
                         <li><strong style="color: #F3DA7A;">மிக முக்கியம்:</strong> பணம் செலுத்தும் முன் Add Note அல்லது Remarks-ல் மறக்காமல் <strong>உங்கள் பெயரை</strong> டைப் செய்யவும்.</li>
-                        <li>பணம் செலுத்திய பிறகு, ரசீதை (Screenshot) எங்களின் வாட்ஸ்அப் எண்ணிற்கு (<a href="https://wa.me/916382838017" style="color: #25D366; text-decoration: none; font-weight: bold;">6382838017</a>) அனுப்பவும்.</li>
+                        <li>பணம் செலுத்திய பிறகு, ரசீதை (Screenshot) எங்களின் வாட்ஸ்அப் எண்ணிற்கு (<a href="https://wa.me/916382838017" style="color: #25D366; text-decoration: none; font-weight: bold;">6382838017</a> / <a href="https://wa.me/919965236069" style="color: #25D366; text-decoration: none; font-weight: bold;">9965236069</a>) அனுப்பவும்.</li>
                     </span>
                 </ol>
             </div>
@@ -450,8 +450,9 @@
                 <span class="ta-text">சந்தேகங்கள் உள்ளதா? கீழே உள்ள வழிகளில் எங்களை நேரடியாகத் தொடர்பு கொள்ளலாம்:</span>
             </p>
             <div class="contact-box">
-                <p><span class="en-text">Phone: </span><span class="ta-text">தொலைபேசி: </span><span>6382838017</span></p>
-                <p><span class="en-text">Email: </span><span class="ta-text">மின்னஞ்சல்: </span><span>mlpdiwalisavingscheme@gmail.com</span></p>
+                <!-- NUMBERS & EMAIL FIXED -->
+                <p><span class="en-text">Phone: </span><span class="ta-text">தொலைபேசி: </span><span>6382838017, 9965236069</span></p>
+                <p><span class="en-text">Email: </span><span class="ta-text">மின்னஞ்சல்: </span><span><a href="mailto:mlpdiwalisavingscheme@gmail.com" style="color: #F3DA7A; text-decoration: none; word-break: break-all;">mlpdiwalisavingscheme@gmail.com</a></span></p>
             </div>
             <div class="contact-grid">
                 <a href="https://maps.app.goo.gl/LpvbzzrLgPRrhpgu8" target="_blank" class="contact-btn"><span class="no-gradient" style="font-size: 1.2em;">📍</span> <span class="en-text">Location</span><span class="ta-text">அமைவிடம்</span></a>
@@ -551,7 +552,7 @@
         function copyMainUpiID() {
             const upiId = "Mlpdiwalisavingscheme2015@ibl";
             const isTamil = document.body.classList.contains('lang-ta-active');
-            
+
             navigator.clipboard.writeText(upiId).then(() => {
                 const btn = document.getElementById('mainCopyUpiBtn');
                 btn.innerHTML = isTamil 
@@ -559,11 +560,11 @@
                     : '<span style="font-size: 1.2em;" class="no-gradient">✅</span><span class="en-text" style="display:inline; text-shadow: none;">COPIED!</span>';
                 btn.style.background = "linear-gradient(45deg, #25D366, #128C7E)";
                 btn.style.color = "#fff";
-                
+
                 alert(isTamil 
                     ? "UPI ID காப்பி செய்யப்பட்டது! \n\nஇப்போது PhonePe அல்லது GPay-ல் Paste செய்து, Add Note-ல் உங்கள் பெயரை டைப் செய்து பணம் கட்டவும்." 
                     : "UPI ID Copied Successfully! \n\nOpen PhonePe/GPay, Paste it, and don't forget to enter your Name in the 'Add Note' section.");
-                
+
                 setTimeout(() => { 
                     btn.innerHTML = isTamil 
                         ? '<span style="font-size: 1.2em;" class="no-gradient">📋</span><span class="ta-text" style="display:inline; text-shadow: none;">காப்பி செய் (COPY)</span>' 
